@@ -1,5 +1,6 @@
 workspace "Rorschach"
-	architecture "x64"
+	architecture ("x86_64")
+	 startproject "SandboxProj"
 	
 	configurations
 	{
@@ -42,7 +43,7 @@ project "Rorschach"
 		
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin//" .. outputdir .. "/Sandbox")
+			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/SandboxProj")
 		}
 		
 	filter "configurations:Debug"
@@ -75,7 +76,7 @@ project "SandboxProj"
 	
 	includedirs
 	{
-		"%{prj.name}/vendor/spdlog/include",
+		"Rorschach/vendor/spdlog/include",
 		"Rorschach/src"
 	}
 	
