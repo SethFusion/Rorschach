@@ -1,0 +1,3 @@
+[submodule "Rorschach/vendor/spdlog"]
+	path = Rorschach/vendor/spdlog
+	url = https://github.com/gabime/spdlog.git
